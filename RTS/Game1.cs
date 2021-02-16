@@ -7,7 +7,17 @@ namespace RTS
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
+        private SpriteBatch spriteBatch;
+
+
+        private Texture2D House1;
+        private Texture2D House2;
+        private Texture2D Miner1;
+        private Texture2D Miner2;
+        private Texture2D Miner3;
+        private Texture2D Miner4;
+        private Texture2D Crystal;
+        private Texture2D Rock;
 
         public Game1()
         {
@@ -25,7 +35,15 @@ namespace RTS
 
         protected override void LoadContent()
         {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            House1 = Content.Load<Texture2D>("1House");
+            House2 = Content.Load<Texture2D>("2House");
+            Miner1 = Content.Load<Texture2D>("1Player");
+            Miner2 = Content.Load<Texture2D>("2Player");
+            Miner3 = Content.Load<Texture2D>("3Player");
+            Miner4 = Content.Load<Texture2D>("4Player");
+            Crystal = Content.Load<Texture2D>("1Crystal");
+            Rock = Content.Load<Texture2D>("1Rock");
 
             // TODO: use this.Content to load your game content here
         }
